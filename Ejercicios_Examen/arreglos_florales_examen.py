@@ -27,13 +27,11 @@ def unidades_tipo(tipoBuscado, diccionarioArreglos, diccionarioBodega):
     acumulador_stock = 0
     
     for codigo_arreglo, lista_atributos in diccionarioArreglos.items():
-        
         if lista_atributos[1] == tipoBuscado:
             
             for codigo_bodega, lista_atributos_bodega in diccionarioBodega.items():
-
                 if codigo_arreglo == codigo_bodega:
-
+                    
                     acumulador_stock += lista_atributos_bodega[1]
                     break
 
@@ -107,13 +105,10 @@ bodega = {
 
 while True:
     mostrar_menu()
-
     opcionSelecciona = leer_opcion()
 
     if opcionSelecciona == 1:
-
         tipo_buscado = input("Ingresa el tipo de arreglo: ")
-
         unidades_tipo(tipo_buscado, arreglos, bodega)
 
     elif opcionSelecciona == 2:
